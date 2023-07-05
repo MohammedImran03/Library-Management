@@ -80,7 +80,7 @@ export default function Adminpage(){
   }
   function serchcontent(sttr) {
     const displaytickets = productData.filter((row) =>
-      row.name.toLowerCase().includes(sttr.toLowerCase())
+      row.name.toLowerCase().includes(sttr.toLowerCase()) || row.author.toLowerCase().includes(sttr.toLowerCase())
     );
     setfilteredcards(displaytickets);
   }
